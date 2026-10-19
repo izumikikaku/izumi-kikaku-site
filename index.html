@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>イズミ企画株式会社 | TikTok・ショート動画運用代行</title>
+  <meta name="description" content="イズミ企画株式会社はTikTokを中心としたショート動画の運用代行会社です。大手出身のノウハウと数十社の運用実績で、求人・集客・認知拡大をショート動画で実現。企画・撮影・編集・投稿・分析まで一貫対応、費用は大手の半値以下。">
+  <meta property="og:title" content="イズミ企画株式会社 | TikTok・ショート動画運用代行">
+  <meta property="og:description" content="大手品質のショート動画運用を、大手の半値以下で。求人・集客・認知拡大、業種問わず対応します。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://izumi-kikaku.com/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0b10'/%3E%3Cpath d='M26 20v24l20-12z' fill='%23fe2c55' transform='translate(-2 1)'/%3E%3Cpath d='M26 20v24l20-12z' fill='%2325f4ee' transform='translate(1 -1)' opacity='.85'/%3E%3Cpath d='M26 20v24l20-12z' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@600;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0b0b10;
+      --ink-2: #16161d;
+      --ink-3: #22222b;
+      --paper: #ffffff;
+      --paper-2: #f5f5f8;
+      --text: #15151b;
+      --muted: #6b6b78;
+      --muted-dark: #a3a3b2;
+      --pink: #fe2c55;
+      --cyan: #25f4ee;
+      --line: #e6e6ee;
+      --radius: 18px;
+      --max: 1120px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Noto Sans JP", system-ui, sans-serif;
+      color: var(--text);
+      background: var(--paper);
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    img, svg { display: block; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 16px; }
+    .num { font-family: "Inter", "Noto Sans JP", sans-serif; font-weight: 900; letter-spacing: -0.02em; }
+
+    /* ===== ヘッダー ===== */
+    header {
+      position: fixed; inset: 0 0 auto 0; z-index: 50;
+      background: rgba(11, 11, 16, 0.82);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { display: flex; align-items: center; gap: 10px; color: #fff; font-weight: 900; font-size: 17px; letter-spacing: 0.02em; }
+    .logo-mark { width: 30px; height: 30px; }
+    .nav-links { display: flex; gap: 28px; font-size: 14px; color: #d8d8e2; }
+    .nav-links a:hover { color: #fff; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 14px 26px; border-radius: 999px; font-weight: 700; font-size: 15px;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-pink { background: var(--pink); color: #fff; box-shadow: 0 8px 24px rgba(254,44,85,0.35); }
+    .btn-ghost { border: 1.5px solid rgba(255,255,255,0.35); color: #fff; }
+    .btn-sm { padding: 9px 18px; font-size: 13px; }
+    @media (max-width: 860px) { .nav-links { display: none; } }
+
+    /* ===== ヒーロー ===== */
+    .hero {
+      position: relative; background: var(--ink); color: #fff;
+      padding: 128px 0 72px; overflow: hidden;
+    }
+    .hero::before, .hero::after {
+      content: ""; position: absolute; width: 520px; height: 520px; border-radius: 50%;
+      filter: blur(90px); opacity: .28; pointer-events: none;
+    }
+    .hero::before { background: var(--pink); top: -160px; right: -120px; }
+    .hero::after { background: var(--cyan); bottom: -220px; left: -160px; opacity: .18; }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.05fr 1fr; gap: 40px; align-items: center; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px;
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+      font-size: 13px; color: #e8e8f0; margin-bottom: 22px;
+    }
+    .rec { width: 8px; height: 8px; border-radius: 50%; background: var(--pink); box-shadow: 0 0 0 0 rgba(254,44,85,.7); animation: rec 1.6s infinite; }
+    @keyframes rec { 70% { box-shadow: 0 0 0 10px rgba(254,44,85,0); } 100% { box-shadow: 0 0 0 0 rgba(254,44,85,0); } }
+    .hero h1 { font-size: clamp(32px, 4.6vw, 54px); line-height: 1.25; font-weight: 900; letter-spacing: 0.01em; }
+    .glitch { position: relative; display: inline-block; text-shadow: -3px -2px 0 var(--cyan), 3px 2px 0 var(--pink); }
+    .hero-lead { margin: 22px 0 32px; font-size: 16px; color: #c9c9d6; max-width: 34em; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+    .hero-tags span { font-size: 13px; color: #cfcfdb; padding: 5px 12px; border-radius: 999px; background: rgba(255,255,255,0.06); }
+
+    /* スマホ（ショート動画）モック */
+    .phones { position: relative; height: 560px; }
+    .phone {
+      position: absolute; width: 250px; aspect-ratio: 9 / 19; border-radius: 38px;
+      background: #000; padding: 9px; box-shadow: 0 30px 60px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.08);
+    }
+    .phone .screen { position: relative; width: 100%; height: 100%; border-radius: 30px; overflow: hidden; }
+    .phone.p1 { left: 50%; top: 10px; transform: translateX(-50%); z-index: 3; }
+    .phone.p2 { left: 4%; top: 70px; transform: rotate(-9deg) scale(.86); z-index: 2; opacity: .9; }
+    .phone.p3 { right: 4%; top: 70px; transform: rotate(9deg) scale(.86); z-index: 2; opacity: .9; }
+    .scene { position: absolute; inset: 0; display: grid; place-items: center; font-size: 92px; animation: zoom 7s ease-in-out infinite alternate; }
+    @keyframes zoom { from { transform: scale(1); } to { transform: scale(1.12); } }
+    .s-pink { background: radial-gradient(circle at 30% 20%, #ff7a95, #c3164a 55%, #3a0716); }
+    .s-cyan { background: radial-gradient(circle at 70% 25%, #8ffcf8, #0e8f9b 55%, #062a33); }
+    .s-violet { background: radial-gradient(circle at 40% 30%, #c4a2ff, #5b2bd1 55%, #170a3a); }
+    .tt-top { position: absolute; top: 14px; left: 0; right: 0; display: flex; justify-content: center; gap: 14px; font-size: 12px; color: rgba(255,255,255,.7); font-weight: 700; z-index: 2; }
+    .tt-top b { color: #fff; border-bottom: 2px solid #fff; padding-bottom: 2px; }
+    .tt-side { position: absolute; right: 8px; bottom: 74px; display: flex; flex-direction: column; align-items: center; gap: 14px; z-index: 2; }
+    .tt-avatar { width: 38px; height: 38px; border-radius: 50%; border: 2px solid #fff; background: linear-gradient(135deg, var(--cyan), var(--pink)); display: grid; place-items: center; font-size: 13px; font-weight: 900; color: #fff; position: relative; }
+    .tt-avatar::after { content: "+"; position: absolute; bottom: -9px; left: 50%; transform: translateX(-50%); width: 18px; height: 18px; border-radius: 50%; background: var(--pink); font-size: 14px; line-height: 17px; text-align: center; }
+    .tt-ico { width: 30px; height: 30px; color: #fff; filter: drop-shadow(0 1px 2px rgba(0,0,0,.4)); }
+    .tt-ico.liked { color: var(--pink); animation: beat 1.4s ease-in-out infinite; }
+    @keyframes beat { 0%,100% { transform: scale(1); } 15% { transform: scale(1.25); } 30% { transform: scale(1); } }
+    .tt-cap { position: absolute; left: 12px; right: 56px; bottom: 22px; color: #fff; font-size: 12px; line-height: 1.5; z-index: 2; text-shadow: 0 1px 3px rgba(0,0,0,.5); }
+    .tt-cap b { display: block; font-size: 13px; margin-bottom: 2px; }
+    .tt-bar { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: rgba(255,255,255,.25); z-index: 2; }
+    .tt-bar i { display: block; height: 100%; background: #fff; animation: prog 6s linear infinite; }
+    @keyframes prog { from { width: 0; } to { width: 100%; } }
+    .float-chip {
+      position: absolute; z-index: 4; background: #fff; color: var(--text); border-radius: 14px; padding: 10px 14px;
+      box-shadow: 0 14px 30px rgba(0,0,0,.35); font-size: 12px; line-height: 1.4; animation: floaty 4s ease-in-out infinite;
+    }
+    .float-chip strong { display: block; font-size: 20px; }
+    .chip-a { left: -6px; bottom: 150px; }
+    .chip-b { right: 0; top: 30px; animation-delay: -2s; }
+    @keyframes floaty { 50% { transform: translateY(-10px); } }
+    .mock-note { position: absolute; bottom: 0; left: 0; right: 0; text-align: center; font-size: 11px; color: #8a8a99; }
+    @media (max-width: 860px) {
+      .hero { padding: 104px 0 56px; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .phones { height: 480px; }
+      .phone { width: 210px; }
+      .phone.p2 { left: -10px; } .phone.p3 { right: -10px; }
+      .chip-a { left: 4px; } .chip-b { right: 4px; }
+    }
+    @media (max-width: 420px) { .phone.p2, .phone.p3 { display: none; } }
+
+    /* ===== ハッシュタグ流れるやつ ===== */
+    .marquee { background: var(--pink); color: #fff; overflow: hidden; white-space: nowrap; padding: 14px 0; font-weight: 900; font-size: 18px; }
+    .marquee-track { display: inline-block; animation: slide 28s linear infinite; }
+    .marquee-track span { margin: 0 22px; }
+    @keyframes slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ===== 共通セクション ===== */
+    section { padding: 96px 0; }
+    .sec-dark { background: var(--ink); color: #fff; }
+    .sec-gray { background: var(--paper-2); }
+    .sec-head { text-align: center; margin-bottom: 52px; }
+    .sec-en { font-family: "Inter", sans-serif; font-weight: 900; font-size: 13px; letter-spacing: .2em; color: var(--pink); text-transform: uppercase; }
+    .sec-head h2 { font-size: clamp(26px, 3.6vw, 38px); font-weight: 900; line-height: 1.4; margin-top: 8px; }
+    .sec-head p { color: var(--muted); margin-top: 12px; }
+    .sec-dark .sec-head p { color: var(--muted-dark); }
+    @media (max-width: 640px) { section { padding: 72px 0; } .sec-head { margin-bottom: 36px; } }
+
+    /* ===== 数字 ===== */
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .stat { background: var(--ink-2); border: 1px solid rgba(255,255,255,.07); border-radius: var(--radius); padding: 26px 20px; text-align: center; }
+    .stat .num { font-size: clamp(30px, 4vw, 42px); line-height: 1.1; background: linear-gradient(90deg, var(--cyan), #fff 50%, var(--pink)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .stat .num small { font-size: .5em; }
+    .stat p { color: var(--muted-dark); font-size: 13px; margin-top: 8px; }
+    @media (max-width: 860px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+
+    /* ===== 目的別 ===== */
+    .goals { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .goal { border-radius: 22px; padding: 30px 26px; color: #fff; position: relative; overflow: hidden; min-height: 260px; }
+    .goal .em { font-size: 44px; }
+    .goal h3 { font-size: 22px; font-weight: 900; margin: 14px 0 8px; }
+    .goal p { font-size: 14px; opacity: .92; }
+    .goal .tag { position: absolute; top: 20px; right: 20px; font-size: 12px; font-weight: 700; background: rgba(0,0,0,.25); padding: 4px 10px; border-radius: 999px; }
+    .g1 { background: linear-gradient(150deg, #ff4f75, #b3123f); }
+    .g2 { background: linear-gradient(150deg, #20d3cc, #0a6f80); }
+    .g3 { background: linear-gradient(150deg, #8b5cf6, #3b1a9a); }
+    @media (max-width: 860px) { .goals { grid-template-columns: 1fr; } .goal { min-height: 0; } }
+
+    /* ===== 実績（TikTokプロフィール風） ===== */
+    .results { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+    .profile { background: var(--ink-2); border: 1px solid rgba(255,255,255,.08); border-radius: 26px; padding: 26px 22px 22px; }
+    .pf-head { text-align: center; }
+    .pf-avatar { width: 84px; height: 84px; margin: 0 auto; border-radius: 50%; display: grid; place-items: center; font-size: 40px; background: conic-gradient(var(--cyan), var(--pink), var(--cyan)); padding: 3px; }
+    .pf-avatar span { width: 100%; height: 100%; border-radius: 50%; background: var(--ink-3); display: grid; place-items: center; }
+    .pf-name { font-weight: 900; font-size: 18px; margin-top: 12px; }
+    .pf-tag { display: inline-block; margin-left: 8px; font-size: 11px; font-weight: 700; color: #fff; background: var(--pink); padding: 2px 8px; border-radius: 999px; vertical-align: 3px; }
+    .pf-handle { color: var(--muted-dark); font-size: 13px; }
+    .pf-stats { display: grid; grid-template-columns: repeat(3, 1fr); margin: 18px 0; text-align: center; }
+    .pf-stats .num { font-size: 22px; }
+    .pf-stats p { font-size: 11px; color: var(--muted-dark); line-height: 1.4; }
+    .pf-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; border-radius: 12px; overflow: hidden; }
+    .pf-grid div { aspect-ratio: 4 / 5; position: relative; display: grid; place-items: center; font-size: 28px; }
+    .pf-grid div:nth-child(3n+1) { background: linear-gradient(160deg, #3a2033, #1d1420); }
+    .pf-grid div:nth-child(3n+2) { background: linear-gradient(160deg, #143036, #0f1c20); }
+    .pf-grid div:nth-child(3n) { background: linear-gradient(160deg, #26204a, #141127); }
+    .pf-grid .hit { outline: 2px solid var(--pink); outline-offset: -2px; }
+    .pf-grid .views { position: absolute; left: 6px; bottom: 4px; font-size: 11px; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 3px; }
+    .pf-note { font-size: 13px; color: #d7d7e2; margin-top: 16px; }
+    .profile.cta-card { display: flex; flex-direction: column; justify-content: center; text-align: center; background: linear-gradient(160deg, rgba(254,44,85,.16), rgba(37,244,238,.10)); border-style: dashed; border-color: rgba(255,255,255,.22); }
+    .profile.cta-card h3 { font-size: 20px; font-weight: 900; margin-bottom: 10px; }
+    .profile.cta-card p { color: #d7d7e2; font-size: 14px; margin-bottom: 20px; }
+
+    /* ===== サービス ===== */
+    .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .svc { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 24px; position: relative; }
+    .svc .no { font-family: "Inter", sans-serif; font-weight: 900; font-size: 40px; color: transparent; -webkit-text-stroke: 1.5px var(--pink); line-height: 1; }
+    .svc h3 { font-size: 18px; font-weight: 900; margin: 12px 0 6px; }
+    .svc p { font-size: 14px; color: var(--muted); }
+    @media (max-width: 860px) { .services { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .services { grid-template-columns: 1fr; } }
+
+    /* ===== 選ばれる理由 ===== */
+    .reasons { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .reason { display: flex; gap: 18px; background: #fff; border-radius: var(--radius); padding: 26px 24px; border: 1px solid var(--line); }
+    .reason .ico { flex: 0 0 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; font-size: 26px; background: linear-gradient(135deg, rgba(37,244,238,.25), rgba(254,44,85,.25)); }
+    .reason h3 { font-size: 17px; font-weight: 900; margin-bottom: 4px; }
+    .reason p { font-size: 14px; color: var(--muted); }
+    @media (max-width: 760px) { .reasons { grid-template-columns: 1fr; } }
+
+    /* ===== 比較表 ===== */
+    .cmp-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    table.cmp { width: 100%; min-width: 620px; border-collapse: separate; border-spacing: 0; font-size: 14px; }
+    .cmp th, .cmp td { padding: 16px 14px; text-align: center; border-bottom: 1px solid var(--line); }
+    .cmp th:first-child, .cmp td:first-child { text-align: left; color: var(--muted); font-weight: 500; }
+    .cmp thead th { font-weight: 900; }
+    .cmp .us { background: #fff0f3; color: var(--pink); font-weight: 900; }
+    .cmp thead .us { background: var(--pink); color: #fff; border-radius: 14px 14px 0 0; }
+
+    /* ===== 料金 ===== */
+    .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: stretch; }
+    .plan { background: var(--ink-2); border: 1px solid rgba(255,255,255,.08); border-radius: 24px; padding: 32px 26px; position: relative; display: flex; flex-direction: column; }
+    .plan.best { border: 2px solid var(--pink); box-shadow: 0 20px 50px rgba(254,44,85,.22); }
+    .plan .badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--pink); color: #fff; font-size: 12px; font-weight: 900; padding: 4px 14px; border-radius: 999px; }
+    .plan h3 { font-size: 16px; font-weight: 700; color: #d7d7e2; }
+    .plan .price { margin: 10px 0 2px; }
+    .plan .price .num { font-size: 46px; }
+    .plan .price span { font-size: 15px; font-weight: 700; margin-left: 4px; }
+    .plan .tax { font-size: 12px; color: var(--muted-dark); }
+    .plan .posts { margin: 18px 0; padding: 12px; border-radius: 12px; background: rgba(255,255,255,.05); text-align: center; font-weight: 700; }
+    .plan .posts .num { font-size: 26px; color: var(--cyan); }
+    .plan ul { list-style: none; font-size: 14px; color: #d7d7e2; flex: 1; }
+    .plan li { padding: 7px 0 7px 24px; position: relative; border-bottom: 1px dashed rgba(255,255,255,.08); }
+    .plan li::before { content: ""; position: absolute; left: 0; top: 13px; width: 14px; height: 8px; border-left: 2.5px solid var(--cyan); border-bottom: 2.5px solid var(--cyan); transform: rotate(-45deg); }
+    .plan li.off { color: #6d6d7c; } .plan li.off::before { border-color: #4a4a57; }
+    .plan .btn { margin-top: 22px; }
+    .price-note { text-align: center; font-size: 13px; color: var(--muted-dark); margin-top: 20px; }
+    @media (max-width: 900px) { .plans { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; } }
+
+    /* ===== 流れ ===== */
+    .flow { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; counter-reset: step; }
+    .step { text-align: center; position: relative; }
+    .step .dot { width: 64px; height: 64px; margin: 0 auto 12px; border-radius: 50%; display: grid; place-items: center; font-size: 26px; background: #fff; border: 2px solid var(--line); position: relative; z-index: 1; }
+    .step:not(:last-child)::after { content: ""; position: absolute; top: 32px; left: calc(50% + 36px); right: calc(-50% + 36px); border-top: 2px dashed #d4d4de; }
+    .step h3 { font-size: 15px; font-weight: 900; }
+    .step p { font-size: 12px; color: var(--muted); line-height: 1.6; margin-top: 4px; }
+    @media (max-width: 860px) { .flow { grid-template-columns: repeat(3, 1fr); row-gap: 28px; } .step::after { display: none; } }
+    @media (max-width: 480px) { .flow { grid-template-columns: repeat(2, 1fr); } }
+
+    .policy { max-width: 760px; margin: 56px auto 0; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
+    .policy h3 { font-size: 17px; font-weight: 900; margin-bottom: 8px; }
+    .policy p { font-size: 14px; color: var(--muted); }
+
+    /* ===== CTA ===== */
+    .cta { background: var(--ink); color: #fff; text-align: center; position: relative; overflow: hidden; }
+    .cta::before { content: ""; position: absolute; inset: auto -20% -60% -20%; height: 120%; background: radial-gradient(ellipse at center, rgba(254,44,85,.35), transparent 60%); }
+    .cta .wrap { position: relative; }
+    .cta h2 { font-size: clamp(26px, 4vw, 42px); font-weight: 900; line-height: 1.4; }
+    .cta p { color: #c9c9d6; margin: 14px auto 30px; max-width: 34em; }
+    .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+    .cta-contact { margin-top: 26px; font-size: 14px; color: #a3a3b2; }
+    .cta-contact a { color: #fff; border-bottom: 1px solid rgba(255,255,255,.3); }
+
+    /* ===== 会社概要 ===== */
+    .company { max-width: 760px; margin: 0 auto; border-top: 1px solid var(--line); }
+    .company div { display: grid; grid-template-columns: 160px 1fr; padding: 18px 4px; border-bottom: 1px solid var(--line); font-size: 15px; }
+    .company dt { color: var(--muted); }
+    @media (max-width: 560px) { .company div { grid-template-columns: 1fr; gap: 2px; } }
+
+    footer { background: var(--ink); color: #8a8a99; text-align: center; font-size: 12px; padding: 28px 16px; }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 共通アイコン -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-heart" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-7.5-4.6-10-9.3C.3 8.4 2.2 4.5 6 4.5c2.1 0 3.4 1.1 4 2.1.6-1 1.9-2.1 4-2.1 3.8 0 5.7 3.9 4 7.2C19.5 16.4 12 21 12 21z"/></symbol>
+    <symbol id="i-comment" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3C6.5 3 2 6.7 2 11.3c0 2.6 1.5 4.9 3.8 6.4L5 21l4.2-2.2c.9.2 1.8.3 2.8.3 5.5 0 10-3.7 10-8.3S17.5 3 12 3z"/></symbol>
+    <symbol id="i-save" viewBox="0 0 24 24"><path fill="currentColor" d="M6 2h12a1 1 0 0 1 1 1v19l-7-4.5L5 22V3a1 1 0 0 1 1-1z"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><path fill="currentColor" d="M13 4l9 8-9 8v-5c-6 0-9 2-11 6 0-7 4-12 11-12V4z"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M7 4.5v15l13-7.5z"/></symbol>
+  </svg>
+
+  <header>
+    <div class="wrap nav">
+      <a href="#top" class="logo" aria-label="イズミ企画株式会社 トップへ">
+        <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#1c1c24"/><path d="M24 20v24l20-12z" fill="#fe2c55" transform="translate(-2 1.5)"/><path d="M24 20v24l20-12z" fill="#25f4ee" transform="translate(1.5 -1)"/><path d="M24 20v24l20-12z" fill="#fff"/></svg>
+        イズミ企画
+      </a>
+      <nav class="nav-links" aria-label="メインメニュー">
+        <a href="#goals">できること</a>
+        <a href="#results">実績</a>
+        <a href="#service">サービス</a>
+        <a href="#price">料金</a>
+        <a href="#company">会社概要</a>
+      </nav>
+      <a href="#contact" class="btn btn-pink btn-sm">無料相談</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ===== ヒーロー ===== -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow"><span class="rec"></span>TikTok・ショート動画 運用代行</div>
+          <h1>その会社の魅力、<br><span style="white-space:nowrap"><span class="glitch">15秒</span>で伝わります。</span></h1>
+          <p class="hero-lead">
+            イズミ企画は、TikTokを中心としたショート動画の運用代行会社です。大手出身のノウハウと数十社の運用経験で、<strong style="color:#fff">求人・集客・認知拡大</strong>をショート動画でつくります。企画から撮影・編集・投稿・分析まで、まるごとお任せください。
+          </p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-pink">30分の無料相談を予約 →</a>
+            <a href="#results" class="btn btn-ghost">実績を見る</a>
+          </div>
+          <div class="hero-tags">
+            <span>#大手品質</span><span>#大手の半値以下</span><span>#企画から分析まで一貫</span><span>#業種を問わず対応</span>
+          </div>
+        </div>
+
+        <div class="phones" aria-label="ショート動画の画面イメージ">
+          <div class="phone p2"><div class="screen">
+            <div class="scene s-cyan" style="animation-delay:-2s">🍜</div>
+            <div class="tt-top"><span>フォロー中</span><b>おすすめ</b></div>
+            <div class="tt-side"><div class="tt-avatar">飲</div><svg class="tt-ico"><use href="#i-heart"/></svg><svg class="tt-ico"><use href="#i-comment"/></svg><svg class="tt-ico"><use href="#i-share"/></svg></div>
+            <div class="tt-cap"><b>@restaurant_sample</b>仕込みの裏側、全部見せます</div>
+            <div class="tt-bar"><i style="animation-delay:-3s"></i></div>
+          </div></div>
+
+          <div class="phone p3"><div class="screen">
+            <div class="scene s-violet" style="animation-delay:-4s">💇‍♀️</div>
+            <div class="tt-top"><span>フォロー中</span><b>おすすめ</b></div>
+            <div class="tt-side"><div class="tt-avatar">美</div><svg class="tt-ico"><use href="#i-heart"/></svg><svg class="tt-ico"><use href="#i-comment"/></svg><svg class="tt-ico"><use href="#i-share"/></svg></div>
+            <div class="tt-cap"><b>@salon_sample</b>ビフォーアフター、見てください</div>
+            <div class="tt-bar"><i style="animation-delay:-1s"></i></div>
+          </div></div>
+
+          <div class="phone p1"><div class="screen">
+            <div class="scene s-pink">🏢</div>
+            <div class="tt-top"><span>フォロー中</span><b>おすすめ</b></div>
+            <div class="tt-side">
+              <div class="tt-avatar">貴社</div>
+              <svg class="tt-ico liked"><use href="#i-heart"/></svg>
+              <svg class="tt-ico"><use href="#i-comment"/></svg>
+              <svg class="tt-ico"><use href="#i-save"/></svg>
+              <svg class="tt-ico"><use href="#i-share"/></svg>
+            </div>
+            <div class="tt-cap"><b>@your_company</b>次にバズるのは、貴社のアカウントです。#求人 #集客</div>
+            <div class="tt-bar"><i></i></div>
+          </div></div>
+
+          <div class="float-chip chip-a">歯科医院の運用実績<strong class="num">443万回</strong>最高再生（運用3ヶ月）</div>
+          <div class="float-chip chip-b">求人の運用実績<strong class="num">月20件+</strong>TikTok経由の応募</div>
+          <p class="mock-note">※ 画面はイメージです</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>#求人</span><span>#集客</span><span>#認知拡大</span><span>#採用ブランディング</span><span>#店舗集客</span><span>#美容</span><span>#飲食</span><span>#不動産</span><span>#士業</span><span>#医療</span><span>#建設</span><span>#BtoB</span>
+        <span>#求人</span><span>#集客</span><span>#認知拡大</span><span>#採用ブランディング</span><span>#店舗集客</span><span>#美容</span><span>#飲食</span><span>#不動産</span><span>#士業</span><span>#医療</span><span>#建設</span><span>#BtoB</span>
+      </div>
+    </div>
+
+    <!-- ===== 数字 ===== -->
+    <section class="sec-dark" style="padding-top:72px;padding-bottom:72px">
+      <div class="wrap stats">
+        <div class="stat reveal"><div class="num">数十<small>社</small></div><p>これまでの運用実績</p></div>
+        <div class="stat reveal"><div class="num">1/2<small>以下</small></div><p>大手代理店と比べた費用</p></div>
+        <div class="stat reveal"><div class="num">443<small>万回</small></div><p>最高再生数（歯科医院・運用3ヶ月）</p></div>
+        <div class="stat reveal"><div class="num">18<small>万人</small></div><p>在籍クリエイターのフォロワー数</p></div>
+      </div>
+    </section>
+
+    <!-- ===== 目的別 ===== -->
+    <section id="goals">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <div class="sec-en">What we do</div>
+          <h2>目的に合わせて、<br>“伸びる”ショート動画を設計します。</h2>
+          <p>求人でも、集客でも、認知拡大でも。業種を問わず対応します。</p>
+        </div>
+        <div class="goals">
+          <div class="goal g1 reveal">
+            <span class="tag">RECRUIT</span>
+            <div class="em">🙋</div>
+            <h3>求人・採用</h3>
+            <p>職場の雰囲気や働く人の素顔を動画で発信。求人票では伝わらない魅力で、応募につなげます。</p>
+          </div>
+          <div class="goal g2 reveal">
+            <span class="tag">CUSTOMER</span>
+            <div class="em">🛍️</div>
+            <h3>集客・問い合わせ</h3>
+            <p>商品やサービスの“欲しくなる瞬間”を切り取り、来店・予約・問い合わせを増やします。</p>
+          </div>
+          <div class="goal g3 reveal">
+            <span class="tag">BRANDING</span>
+            <div class="em">📣</div>
+            <h3>認知拡大</h3>
+            <p>トレンドと企画力で、まだ貴社を知らない人に届く動画を継続的に生み出します。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 実績 ===== -->
+    <section id="results" class="sec-dark">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <div class="sec-en">Results</div>
+          <h2>業種別の運用実績</h2>
+          <p>店舗・医療・不動産から、経営者や個人の発信まで。成果の一部をご紹介します（お名前は伏せています）。</p>
+        </div>
+        <div class="results" id="results-list"></div>
+      </div>
+    </section>
+
+    <!-- ===== サービス ===== -->
+    <section id="service" class="sec-gray">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <div class="sec-en">Service</div>
+          <h2>企画から分析まで、まるごと。</h2>
+          <p>社内に動画担当がいなくても大丈夫。必要な工程をすべて一貫して担当します。</p>
+        </div>
+        <div class="services">
+          <div class="svc reveal"><div class="no">01</div><h3>企画・構成</h3><p>業界とトレンドを分析し、貴社に合った企画を毎月立案。コンテンツカレンダーで計画的に運用します。</p></div>
+          <div class="svc reveal"><div class="no">02</div><h3>台本・撮影</h3><p>台本は事前に確認いただけます。撮影はまとめ撮りで、貴社のご負担を最小限に。</p></div>
+          <div class="svc reveal"><div class="no">03</div><h3>編集</h3><p>テロップ・BGM・テンポまで、最後まで見られる編集に仕上げます。</p></div>
+          <div class="svc reveal"><div class="no">04</div><h3>投稿・運用</h3><p>最適な時間帯とハッシュタグ設計で投稿。コメント対応の方針もご提案します。</p></div>
+          <div class="svc reveal"><div class="no">05</div><h3>分析・改善</h3><p>再生数・フォロワー・反応を分析し、翌月の企画に反映し続けます。</p></div>
+          <div class="svc reveal"><div class="no">06</div><h3>専属担当</h3><p>専属担当が企画から分析まで一貫して対応。チャットでスピーディーにやり取りできます。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 選ばれる理由 ===== -->
+    <section class="sec-gray" style="padding-top:0">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <div class="sec-en">Why us</div>
+          <h2>イズミ企画が選ばれる理由</h2>
+        </div>
+        <div class="reasons">
+          <div class="reason reveal"><div class="ico">🏆</div><div><h3>大手出身のノウハウ</h3><p>大手で培った企画・制作・運用の知見をそのまま。クオリティは大手と同等以上を担保します。</p></div></div>
+          <div class="reason reveal"><div class="ico">📈</div><div><h3>数十社の運用経験</h3><p>業種も目的もさまざまなアカウントを運用してきた経験から、“伸びる型”を知っています。</p></div></div>
+          <div class="reason reveal"><div class="ico">💴</div><div><h3>大手の半値以下</h3><p>大手代理店の相場は月50〜100万円。品質はそのままに、半値以下でご提供します。</p></div></div>
+          <div class="reason reveal"><div class="ico">🎬</div><div><h3>18万人クリエイター在籍</h3><p>TikTokフォロワー18万人のクリエイターが在籍。バズを生み出してきた実践の感覚を企画に活かします。</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 比較 ===== -->
+    <section>
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <div class="sec-en">Comparison</div>
+          <h2>他社との比較</h2>
+        </div>
+        <div class="cmp-scroll reveal">
+          <table class="cmp">
+            <thead><tr><th></th><th>大手代理店</th><th>中堅代行会社</th><th class="us">イズミ企画</th></tr></thead>
+            <tbody>
+              <tr><td>月額費用（目安）</td><td>50〜100万円</td><td>30〜50万円</td><td class="us">25万円〜（税別）</td></tr>
+              <tr><td>制作品質</td><td>高品質</td><td>中〜高品質</td><td class="us">大手同等以上</td></tr>
+              <tr><td>担当者</td><td>複数名・変更あり</td><td>変更あり</td><td class="us">専属担当が一貫対応</td></tr>
+              <tr><td>連絡</td><td>週1定例・メール</td><td>メール中心</td><td class="us">チャットで即対応</td></tr>
+              <tr><td>企画〜投稿</td><td>分業体制</td><td>一部外注</td><td class="us">すべて一貫</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 料金 ===== -->
+    <section id="price" class="sec-dark">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <div class="sec-en">Price</div>
+          <h2>料金プラン</h2>
+          <p>すべてのプランで、制作した動画の二次利用が可能です。本数が増えるほど1本あたりの単価がお得になります。</p>
+        </div>
+        <div class="plans">
+          <div class="plan best reveal">
+            <span class="badge">おすすめ</span>
+            <h3>ベーシックプラン</h3>
+            <div class="price"><span class="num">25</span><span>万円/月</span></div>
+            <div class="tax">税込 275,000円</div>
+            <div class="posts">TikTok 月 <span class="num">15</span> 本投稿</div>
+            <ul>
+              <li>企画・台本・撮影・編集</li>
+              <li>撮影 月1回（まとめ撮り）</li>
+              <li>投稿管理・ハッシュタグ設計</li>
+              <li>専属担当</li>
+              <li>動画の二次利用OK（広告・SNS転用）</li>
+              <li class="off">Instagramへの投稿</li>
+              <li class="off">月次レポート・定例ミーティング</li>
+            </ul>
+            <a href="#contact" class="btn btn-pink">相談する</a>
+          </div>
+          <div class="plan reveal">
+            <h3>スタンダードプラン</h3>
+            <div class="price"><span class="num">32</span><span>万円/月</span></div>
+            <div class="tax">税込 352,000円</div>
+            <div class="posts">TikTok 月 <span class="num">20</span> 本投稿</div>
+            <ul>
+              <li>企画・台本・撮影・編集</li>
+              <li>撮影 月1回（まとめ撮り）</li>
+              <li>投稿管理・ハッシュタグ設計</li>
+              <li>専属担当</li>
+              <li>動画の二次利用OK（広告・SNS転用）</li>
+              <li class="off">Instagramへの投稿</li>
+              <li class="off">月次レポート・定例ミーティング</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost">相談する</a>
+          </div>
+          <div class="plan reveal">
+            <h3>プレミアムプラン</h3>
+            <div class="price"><span class="num">45</span><span>万円/月</span></div>
+            <div class="tax">税込 495,000円</div>
+            <div class="posts">月 <span class="num">30</span> 本投稿<br><small style="font-weight:500;color:#d7d7e2">TikTok＋Instagram</small></div>
+            <ul>
+              <li>企画・台本・撮影・編集</li>
+              <li>撮影 月2回</li>
+              <li>投稿管理・ハッシュタグ設計</li>
+              <li>専属担当</li>
+              <li>動画の二次利用OK（広告・SNS転用）</li>
+              <li>Instagramへの投稿</li>
+              <li>月次レポート・定例ミーティング</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost">相談する</a>
+          </div>
+        </div>
+        <p class="price-note">表示価格は税別です。ご状況に合わせて最適なプランをご提案します。</p>
+      </div>
+    </section>
+
+    <!-- ===== 流れ ===== -->
+    <section class="sec-gray">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <div class="sec-en">Flow</div>
+          <h2>ご相談から投稿開始まで</h2>
+        </div>
+        <div class="flow">
+          <div class="step reveal"><div class="dot">💬</div><h3>無料相談</h3><p>オンラインで30分<br>課題と目的を伺います</p></div>
+          <div class="step reveal"><div class="dot">🔍</div><h3>分析・ご提案</h3><p>業界と競合を分析し<br>運用方針をご提案</p></div>
+          <div class="step reveal"><div class="dot">📝</div><h3>企画・台本</h3><p>月ごとの企画と<br>台本をご確認</p></div>
+          <div class="step reveal"><div class="dot">🎥</div><h3>撮影・編集</h3><p>まとめ撮りで<br>効率よく制作</p></div>
+          <div class="step reveal"><div class="dot">🚀</div><h3>投稿</h3><p>最適な時間帯に<br>継続投稿</p></div>
+          <div class="step reveal"><div class="dot">📊</div><h3>分析・改善</h3><p>数字を見て<br>翌月の企画へ反映</p></div>
+        </div>
+        <div class="policy reveal">
+          <h3>クライアント審査制について</h3>
+          <p>成果に責任を持つため、事前のヒアリングで貴社のビジネスとTikTokの相性を分析し、成果が出せると判断できた場合にお引き受けしています。相性がよくないと判断した場合は、正直にお伝えします。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section id="contact" class="cta">
+      <div class="wrap">
+        <div class="sec-en" style="color:var(--cyan)">Contact</div>
+        <h2 style="margin-top:8px">まずは30分、<br>オンラインでお話ししませんか。</h2>
+        <p>貴社の業種・目的に合わせて、どんな動画なら伸びるのかを具体的にお伝えします。相談だけでも大歓迎です。</p>
+        <div class="cta-buttons">
+          <a class="btn btn-pink" href="mailto:r.akimoto@izumi-kikaku.com?subject=%E3%80%90%E3%81%94%E7%9B%B8%E8%AB%87%E3%80%91TikTok%E9%81%8B%E7%94%A8%E4%BB%A3%E8%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6&body=%E4%BC%9A%E7%A4%BE%E5%90%8D%EF%BC%9A%0A%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0A%E3%81%94%E7%9B%B8%E8%AB%87%E5%86%85%E5%AE%B9%EF%BC%9A%0A%E3%81%94%E5%B8%8C%E6%9C%9B%E6%97%A5%E6%99%82%EF%BC%9A%0A">メールで相談する →</a>
+          <a class="btn btn-ghost" href="tel:09069510324">電話する 090-6951-0324</a>
+        </div>
+        <p class="cta-contact">メール：<a href="mailto:r.akimoto@izumi-kikaku.com">r.akimoto@izumi-kikaku.com</a>（担当：秋元）</p>
+      </div>
+    </section>
+
+    <!-- ===== 会社概要 ===== -->
+    <section id="company">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <div class="sec-en">Company</div>
+          <h2>会社概要</h2>
+        </div>
+        <dl class="company reveal">
+          <div><dt>会社名</dt><dd>イズミ企画株式会社</dd></div>
+          <div><dt>代表取締役</dt><dd>秋元 玲来</dd></div>
+          <div><dt>事業内容</dt><dd>TikTok・ショート動画の運用代行（企画・撮影・編集・投稿・分析）<br>インフルエンサーマーケティング</dd></div>
+          <div><dt>お問い合わせ</dt><dd><a href="mailto:r.akimoto@izumi-kikaku.com">r.akimoto@izumi-kikaku.com</a></dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer>&copy; 2026 イズミ企画株式会社</footer>
+
+  <script>
+    // ===== 業種別の実績（実際の数字だけを入れること）=====
+    // 項目: industry=業種, icon=絵文字, handle=表示名, period=運用期間, topViews=最高再生数,
+    //       result=成果, resultLabel=成果の見出し, note=説明文
+    const RESULTS = [
+      {
+        industry: "歯科医院", tag: "令和の虎出演", icon: "🦷", handle: "院長アカウント",
+        stats: [["3ヶ月", "運用期間"], ["4万人", "フォロワー"], ["443万", "最高再生数"]],
+        badge: "443万",
+        note: "運用3ヶ月でフォロワー4万人。最高443万回再生の動画を生み出しました。",
+        thumbs: ["🦷", "😁", "👨‍⚕️", "🪥", "✨", "🏥"]
+      },
+      {
+        industry: "美容クリニック", tag: "令和の虎出演", icon: "💉", handle: "院長アカウント",
+        stats: [["8ヶ月", "運用期間"], ["3.7万人", "フォロワー"], ["多数", "問い合わせ"]],
+        badge: "3.7万人",
+        note: "院長が出演するアカウントを8ヶ月でフォロワー3.7万人に。問い合わせを多数獲得しています。",
+        thumbs: ["💉", "✨", "👩‍⚕️", "💄", "🪞", "🏥"]
+      },
+      {
+        industry: "探偵業", icon: "🕵️", handle: "探偵事務所",
+        stats: [["2ヶ月", "運用期間"], ["93.6万", "最高再生数"], ["15件+", "月の問い合わせ"]],
+        badge: "93.6万",
+        note: "運用開始からわずか2ヶ月で最高93.6万回再生。TikTok経由で月15件以上の問い合わせを獲得しています。",
+        thumbs: ["🔍", "🕵️", "📞", "🚗", "📂", "📷"]
+      },
+      {
+        industry: "不動産", icon: "🏠", handle: "不動産会社",
+        stats: [["100万+", "再生の動画が多数"], ["10件+", "月の問い合わせ"], ["直結", "物件問い合わせ導線"]],
+        badge: "100万+",
+        note: "100万回再生を超える動画を多数生み出し、物件の問い合わせに直結する導線を設計。月10件以上の問い合わせにつなげました。（現在アカウントは削除済み）",
+        thumbs: ["🏠", "🔑", "🛋️", "🏢", "📐", "🚪"]
+      },
+      {
+        industry: "キャバクラ", tag: "求人", icon: "🥂", handle: "六本木の店舗",
+        stats: [["多数", "バズ動画"], ["20件+", "月の求人応募"], ["求人", "運用目的"]],
+        badge: "バズ",
+        note: "バズ動画を多数生み出し、TikTok経由の求人応募を月20件以上獲得しています。",
+        thumbs: ["🥂", "💃", "✨", "🍾", "💄", "🌃"]
+      },
+      {
+        industry: "元NHK放送作家", tag: "個人ブランド", icon: "🎙️", handle: "放送作家",
+        stats: [["半年", "運用期間"], ["2万人", "フォロワー"], ["8割", "10万回超えの動画"]],
+        badge: "10万+",
+        note: "半年でフォロワー2万人。投稿した動画の8割が10万回再生を超えています。",
+        thumbs: ["🎙️", "📺", "✍️", "🎬", "💡", "📚"]
+      },
+      {
+        industry: "居酒屋社長", tag: "求人・FC", icon: "🍺", handle: "社長アカウント",
+        stats: [["半年", "運用期間"], ["2万人", "フォロワー"], ["多数", "求人・FC問い合わせ"]],
+        badge: "2万人",
+        note: "社長が発信するアカウントを半年でフォロワー2万人に。求人応募とフランチャイズの問い合わせを多数獲得しています。",
+        thumbs: ["🍺", "🍢", "👨‍🍳", "🏮", "🍶", "🤝"]
+      },
+      {
+        industry: "格闘家", tag: "個人ブランド", icon: "🥊", handle: "選手アカウント",
+        stats: [["半年", "運用期間"], ["2万人", "フォロワー"], ["掲載", "メディアで紹介"]],
+        badge: "2万人",
+        note: "半年でフォロワー2万人。TikTokでの発信がメディアで紹介されました。",
+        thumbs: ["🥊", "💪", "🏆", "🥋", "🔥", "📸"]
+      }
+    ];
+
+    const list = document.getElementById("results-list");
+    const play = '<svg width="12" height="12"><use href="#i-play"/></svg>';
+    RESULTS.forEach(r => {
+      const thumbs = r.thumbs.map((t, i) =>
+        i === 0 ? `<div class="hit">${t}<span class="views">${play}${r.badge}</span></div>` : `<div>${t}</div>`
+      ).join("");
+      list.insertAdjacentHTML("beforeend", `
+        <article class="profile reveal">
+          <div class="pf-head">
+            <div class="pf-avatar"><span>${r.icon}</span></div>
+            <div class="pf-name">${r.industry}${r.tag ? `<span class="pf-tag">${r.tag}</span>` : ""}</div>
+            <div class="pf-handle">${r.handle}</div>
+          </div>
+          <div class="pf-stats">
+            ${r.stats.map(([v, l]) => `<div><div class="num">${v}</div><p>${l}</p></div>`).join("")}
+          </div>
+          <div class="pf-grid">${thumbs}</div>
+          <p class="pf-note">${r.note}</p>
+        </article>`);
+    });
+    list.insertAdjacentHTML("beforeend", `
+      <article class="profile cta-card reveal">
+        <h3>貴社と同じ業種の事例も<br>ご紹介できます</h3>
+        <p>美容・飲食・不動産・士業・医療・建設など、無料相談で業種に近い事例と具体的な企画案をお見せします。</p>
+        <a href="#contact" class="btn btn-pink">事例を聞いてみる →</a>
+      </article>`);
+
+    // スクロールでふわっと表示
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+    }), { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
