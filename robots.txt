@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://izumi-kikaku.com/sitemap.xml
+Sitemap: http://izumi-kikaku.com/sitemap.xml
